@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.0 on win32)" generated="2024-07-23T19:07:00.690017" rpa="false" schemaversion="5">
+<suite id="s1" name="Add And Remove Product" source="C:\Users\Usuário\Documents\GitHub\automatizacao_robot\2- add_and_remove_product\tests\add_and_remove_product.robot">
+<test id="s1-t1" name="Teste Incluir E Remover Produto No SauceDemo" line="5">
+<kw name="Logar No SauceDemo" owner="saucedemo_keywords">
+<kw name="Abrir Navegador E Navegar Para SauceDemo" owner="saucedemo_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:00.938863" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-23T19:07:00.937863" elapsed="3.868039"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-23T19:07:04.805902" elapsed="0.034954"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:04.945721" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:04.840856" elapsed="0.105865"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:04.946721" level="INFO">Página inicial carregada.</msg>
+<arg>Página inicial carregada.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:04.946721" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:00.937863" elapsed="4.008858"/>
+</kw>
+<kw name="Inserir Usuário E Senha" owner="saucedemo_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:04.947718" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T19:07:04.947718" elapsed="0.099059"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.046777" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.046777" elapsed="0.066322"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.193927" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.113099" elapsed="0.080828"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:05.193927" level="INFO">Usuário e senha inseridos.</msg>
+<arg>Usuário e senha inseridos.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.193927" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:04.946721" elapsed="0.247206"/>
+</kw>
+<kw name="Clicar No Botão De Login" owner="saucedemo_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.194925" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.194925" elapsed="0.080936"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.463978" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.275861" elapsed="0.188117"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:05.464967" level="INFO">Botão de login clicado.</msg>
+<arg>Botão de login clicado.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.464967" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:05.194925" elapsed="0.270042"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.464967" elapsed="0.010637"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.543127" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.475604" elapsed="0.067523"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:05.544128" level="INFO">Logado com sucesso na página de produtos.</msg>
+<arg>Logado com sucesso na página de produtos.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.544128" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:00.936867" elapsed="4.607261"/>
+</kw>
+<kw name="Selecionar Produto Sauce Labs Backpack" owner="saucedemo_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.545126" elapsed="0.017991"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.564115" level="INFO">Clicking element 'xpath=/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div'.</msg>
+<arg>xpath=/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/a/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.564115" elapsed="0.041637"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.730831" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.606751" elapsed="0.124080"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:05.731814" level="INFO">Produto Sauce Labs Backpack selecionado.</msg>
+<arg>Produto Sauce Labs Backpack selecionado.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.730831" elapsed="0.000983"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:05.544128" elapsed="0.187686"/>
+</kw>
+<kw name="Adicionar Produto Ao Carrinho" owner="saucedemo_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div/div/div[2]/div/div/div[2]/button</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.731814" elapsed="0.016988"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.749816" level="INFO">Clicking element 'xpath=/html/body/div/div/div/div[2]/div/div/div[2]/button'.</msg>
+<arg>xpath=/html/body/div/div/div/div[2]/div/div/div[2]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.749816" elapsed="0.031993"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.859739" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.782784" elapsed="0.076955"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:05.860738" level="INFO">Produto adicionado ao carrinho.</msg>
+<arg>Produto adicionado ao carrinho.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.860738" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:05.731814" elapsed="0.128924"/>
+</kw>
+<kw name="Remover Produto Do Carrinho" owner="saucedemo_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div/div/div/div[2]/div/div/div[2]/button</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.861738" elapsed="0.010994"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.873731" level="INFO">Clicking element 'xpath=/html/body/div/div/div/div[2]/div/div/div[2]/button'.</msg>
+<arg>xpath=/html/body/div/div/div/div[2]/div/div/div[2]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.872732" elapsed="0.025985"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.980626" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.899716" elapsed="0.080910"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:05.980626" level="INFO">Produto removido do carrinho.</msg>
+<arg>Produto removido do carrinho.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.980626" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:05.860738" elapsed="0.119888"/>
+</kw>
+<kw name="Clicar No Menu" owner="saucedemo_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=react-burger-menu-btn</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.981619" elapsed="0.014292"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:05.995911" level="INFO">Clicking button 'id=react-burger-menu-btn'.</msg>
+<arg>id=react-burger-menu-btn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T19:07:05.995911" elapsed="0.041201"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:06.149738" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:06.037112" elapsed="0.112626"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:06.150737" level="INFO">Menu aberto.</msg>
+<arg>Menu aberto.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:06.149738" elapsed="0.000999"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:05.981619" elapsed="0.169118"/>
+</kw>
+<kw name="Verificar E Clicar No Logout" owner="saucedemo_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="logout_sidebar_link"]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-23T19:07:06.150737" elapsed="0.015688"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:06.241773" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:06.166425" elapsed="0.075348"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:06.242770" level="INFO">Tentando clicar no botão de logout.</msg>
+<arg>Tentando clicar no botão de logout.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:06.242770" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:06.242770" level="INFO">Clicking element 'xpath=//*[@id="logout_sidebar_link"]'.</msg>
+<arg>xpath=//*[@id="logout_sidebar_link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-23T19:07:06.242770" elapsed="0.036944"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:06.371005" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:06.280732" elapsed="0.090273"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:06.371005" level="INFO">Botão de logout clicado.</msg>
+<arg>Botão de logout clicado.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:06.371005" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:06.150737" elapsed="0.221268"/>
+</kw>
+<kw name="Fechar Navegador" owner="saucedemo_keywords">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-23T19:07:06.439318" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-23T19:07:06.372005" elapsed="0.067313"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-23T19:07:06.439318" elapsed="2.143724"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-23T19:07:08.583042" level="INFO">Navegador fechado.</msg>
+<arg>Navegador fechado.</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-23T19:07:08.583042" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:06.372005" elapsed="2.211037"/>
+</kw>
+<status status="PASS" start="2024-07-23T19:07:00.936867" elapsed="7.647175"/>
+</test>
+<status status="PASS" start="2024-07-23T19:07:00.691025" elapsed="7.894016"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Add And Remove Product">Add And Remove Product</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
