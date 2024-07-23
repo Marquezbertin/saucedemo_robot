@@ -16,8 +16,6 @@ automatizacao_robot/
 ├── requirements.txt
 └── README.md
 
-markdown
-Copiar código
 
 ## Pré-requisitos
 
@@ -84,8 +82,8 @@ Keywords Customizadas
 Os arquivos de keywords customizadas estão no arquivo saucedemo_keywords.robot. Este arquivo contém keywords para ações como abrir o navegador, logar, selecionar produtos, adicionar e remover produtos do carrinho, e fazer logout.
 
 Estrutura do Arquivo de Keywords
+
 robot
-Copiar código
 *** Settings ***
 Library  SeleniumLibrary
 Library  Screenshot
